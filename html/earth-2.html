@@ -1,0 +1,417 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>earth</title>
+<link type="text/css" rel="stylesheet" href="css/style-earth-2.css">
+<script src="js/earth-2.js/"></script>
+	<!--/*网页设计：201918340325-renjiaxin*/-->
+	<!--/*网页编写：201918340325-renjiaxin*/-->
+</head>
+
+<body>
+	<div class="bigBox">
+<!-- 导航部分开始 -->
+		<div class="header">
+			<nav>
+				<ul>
+					<li><a href="../index.html">首页</a></li>
+					<li class="list-inline-item menuDiv"><a href="#">太阳系</a>
+						<ul class="menuUL">
+							<li class="menuLI"><a href="moon-1.html">月球</a></li> <li class="menuLI"><a href="sun-1.html">太阳</a></li>
+							<li class="menuLI"><a href="venus-1.html">金星</a></li> <li class="menuLI"><a href="mercury-1.html">水星</a></li> 
+							<li class="menuLI"><a href="mars-1.html">火星</a></li> <li class="menuLI"><a href="jupiter-1.html">木星</a></li>
+							<li class="menuLI"><a href="saturn-1.html">土星</a></li> <li class="menuLI"><a href="uranus-1.html">天王星</a></li>
+							<li class="menuLI"><a href="neptune-1.html">海王星</a></li> <li class="menuLI"><a href="asteroid world-1.html">小行星世界</a></li>
+							<li class="menuLI"><a href="edge of the solar system-1.html">太阳系边缘</a></li> <li class="menuLI"><a href="solar system survey-1.html">太阳系纵览</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+<!-- 导航部分结束 -->	
+
+<!-- 上盒子部分开始 -->
+		<div class="on">
+			<img src="img/earth-5.jpg" width="100%" alt="earth">
+	
+			<div id="right">
+				<div id="picture">
+					<img src="img/earth-picture.svg" width="40px" height="40px" alt="fly">
+				</div>
+				
+				<div id="nav">
+						<ul>
+							<li><a href="moon-1.html">下一站</a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+<!-- 上盒子部分开始 -->
+		
+<!-- 中导航部分开始 -->
+		<div id="midNav">
+			<ul>
+				<li><a href="earth-1.html">我们的地球</a></li>
+				<li><a class="active" href="#">深入探索</a></li>
+			</ul>
+		</div>
+<!-- 中导航部分结束 -->
+		
+<!-- 下盒子部分开始 -->
+		<div class="down">
+			<div class="left">
+					<ul id="line">
+						<li><a href="#A">▧大小和距离▧</a></li>
+						<li><a href="#B">▧轨道和旋转▧</a></li>
+						<li><a href="#C">▧星环▧</a></li>
+						<li><a href="#D">▧月亮▧</a></li>
+						<li><a href="#E">▧生命▧</a></li>
+					</ul>
+			</div>
+			
+			<div class="allRight">
+				<div class="mid">
+					<div class="text">
+						<span>
+						我们的家乡行星是距太阳第三颗行星，也是我们迄今为止所知道的唯一有生物居住的地方。<br>虽然地球只是太阳系中的第五大行星，但它是我们太阳系中唯一一个表面有液态水的星球。地球只是比附近的金星稍大一点，是最靠近太阳的四颗行星中最大的一颗，所有行星都是由岩石和金属制成的。<br>
+						地球这个名字至少有 1000 年的历史。除了地球之外，所有的行星都以希腊和罗马的众神和女神的名字命名。然而，地球这个名字是一个日耳曼语词，意思是“大地”。
+						</span>
+					</div>
+
+					<div class="title">
+						<p id="A">大小和距离</p>
+					</div>
+
+					<div class="text">
+						<span>
+							地球的半径为 3,959 英里（6,371 公里），是最大的类地行星，也是总体第五大行星。<br>
+							从 9300 万英里（1.5 亿公里）的平均距离来看，地球距离太阳正好是一个天文单位，因为一个天文单位（缩写为 AU）是太阳到地球的距离。该单位提供了一种快速比较行星与太阳距离的简单方法。
+						</span>
+					</div>
+					<div id="bar-waterfall" style="height:500px"></div>
+						<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+						<script type="text/javascript">
+							var dom = document.getElementById("bar-waterfall");
+							var myChart = echarts.init(dom);
+							var app = {};
+							var option;
+							option = {
+								title: {
+									text: '八大行星体积比',
+									subtext: '以地球为1（体积为1.832×10*12km³）（太阳：地球=1300000:1 为不影响图表效果不展示）',
+									sublink: 'http://e.weibo.com/1341556070/AjQH99che'
+								},
+								color:[
+									'#a5e7f0','#59c4e6','#516b91','#1790cf'
+								],
+								tooltip: {
+									trigger: 'axis',
+									axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+										type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+									},
+									formatter: function (params) {
+										var tar = params[1];
+										return tar.name + '<br/>' + tar.seriesName + ' : ' + tar.value;
+									}
+								},
+								grid: {
+									left: '3%',
+									right: '4%',
+									bottom: '3%',
+									containLabel: true
+								},
+								xAxis: {
+									type: 'category',
+									splitLine: {show: false},
+									data: ['木星', '土星', '天王星', '海王星', '地球', '金星','火星','水星']
+								},
+								yAxis: {
+									type: 'value'
+								},
+								series: [
+									{
+										name: '辅助',
+										type: 'bar',
+										stack: '总量',
+										itemStyle: {
+											barBorderColor: 'rgba(0,0,0,0)',
+											color: 'rgba(0,0,0,0)'
+										},
+										emphasis: {
+											itemStyle: {
+												barBorderColor: 'rgba(0,0,0,0)',
+												color: 'rgba(0,0,0,0)'
+											}
+										},
+										data: [700, 1000, 1400, 1200, 1200,1300,1100,1400]
+									},
+									{
+										name: '比例',
+										type: 'bar',
+										stack: '总量',
+										label: {
+											show: true,
+											position: 'inside'
+										},
+										data: [1317, 745, 65, 57, 1,0.86,0.15,0.056]
+									}
+								]
+							};
+
+							if (option && typeof option === 'object') {
+								myChart.setOption(option);
+							}
+						</script>
+
+					<div class="title">
+						<p id="B">轨道和旋转</p>
+					</div>
+
+					<div class="text">
+						<span>
+							当地球绕太阳运行时，它每 23.9 小时完成一圈。绕太阳一圈需要365.25天。额外的四分之一天对我们的日历系统提出了挑战，将一年算作 365 天。为了使我们的年历与我们围绕太阳的轨道保持一致，我们每四年增加一天。那一天称为闰日，加上它的那一年称为闰年。<br>
+							<div class="earth">
+								<img src="img/earth-7.jpg" width="100%" height="auto" alt="earth and sun">
+							</div>
+							地球的自转轴相对于地球围绕太阳运行的轨道平面倾斜 23.4 度。这种倾斜导致了我们每年的季节循环。在一年中的一部分时间里，北半球向着太阳倾斜，而南半球向着太阳倾斜。随着太阳在天空中更高，北方的太阳能加热更大，在那里产生夏季。较少的直接太阳能加热会在南方产生冬天。六个月后，情况发生逆转。春季和秋季开始时，两个半球从太阳接收的热量大致相等。
+						</span>
+					</div>
+
+					<div class="title">
+						<p id="C">星环</p>
+					</div>
+
+					<div class="text">
+						<span>
+							地球没有星环。
+						</span>
+					</div>
+
+					<div class="title">
+						<p id="D">月亮</p>
+					</div>
+
+					<div class="text">
+						<span>
+							地球是唯一有一个月亮的行星。我们的月亮是夜空中最亮、最熟悉的物体。在许多方面，月球负责使地球成为一个如此美好的家园。它稳定了我们星球的摆动，这使得气候在数千年来的变化不大。<br>
+							<div id="container" style="height: 500px"></div>
+						<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+						<script type="text/javascript">
+							var dom = document.getElementById("container");
+							var myChart = echarts.init(dom);
+							var app = {};
+							var option;
+							option = {
+								title: {
+									text: '八大行星已知拥有卫星数',
+									subtext: '数据来自网络'
+								},
+								dataset: {
+									source: [
+										[14, '海王星'],
+										[1, '地球'],
+										[2, '火星'],
+										[0, '水星'],
+										[62, '土星'],
+										[27, '天王星'],
+										[68, '木星'],
+										[0, '金星']
+									]
+								},
+								grid: {containLabel: true},
+								xAxis: {name: 'amount'},
+								yAxis: {type: 'category'},
+								visualMap: {
+									orient: 'horizontal',
+									left: 'center',
+									min: 10,
+									max: 100,
+									// Map the score column to color
+									dimension: 0,
+									inRange: {
+										color:[	'#a5e7f0','#59c4e6','#516b91'
+									],
+									}
+								},
+								series: [
+									{
+										type: 'bar',
+										encode: {
+											// Map the "amount" column to X axis.
+											x: 'amount',
+											// Map the "product" column to Y axis
+											y: 'product'
+										}
+									}
+								]
+							};
+
+							if (option && typeof option === 'object') {
+								myChart.setOption(option);
+							}
+						</script>
+							地球有时会暂时承载绕轨道运行的小行星或大型岩石。在返回环绕太阳的轨道之前，它们通常会被地球引力困住几个月或几年。一些小行星将与地球进行长时间的“共舞”，因为它们都围绕太阳运行。<br>
+							有些卫星是被行星引力捕获的小块岩石，但我们的月球很可能是数十亿年前碰撞的结果。当地球还是一颗年轻的行星时，一大块岩石撞入其中，取代了地球内部的一部分。由此产生的大块聚集在一起形成了我们的月球。月球半径为 1,080 英里（1,738 公里），是太阳系中第五大卫星（仅次于木卫三、泰坦、卡利斯托和艾奥）。<br>
+							月球离地球的距离比大多数人意识到的要远。月球平均距离我们 238,855 英里（384,400 公里）。这意味着地球和月球之间可以容纳 30 个地球大小的行星。
+						</span>
+					</div>
+					<div class="moon">
+						<img src="img/earth-6.jpg" width="100%" height="auto" alt="earth and moon">
+					</div>
+
+					<div class="title">
+						<p id="E">生命</p>
+					</div>
+
+					<div class="text">
+						<span>
+							地球拥有非常适宜的温度和化学物质的混合物，使这里的生命成为可能。最值得注意的是，地球的独特之处在于我们星球的大部分地区都被水覆盖，因为温度允许液态水存在很长时间。大约 38 亿年前，地球广阔的海洋为生命的开始提供了便利的场所。
+							
+							<div id="pie-simple" style="height: 400px"></div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+								<script type="text/javascript">
+									var dom = document.getElementById("pie-simple");
+									var myChart = echarts.init(dom);
+									var app = {};
+									var option;
+									option = {
+										title: {
+											text: '地球海洋陆地占比',
+											left: 'center'
+										},
+										color:[
+											'#59c4e6','#516b91'
+										],
+										tooltip: {
+											trigger: 'item',
+											formatter: '{a} <br/>{b} : {c}%'
+										},
+										legend: {
+											orient: 'vertical',
+											left: 'left',
+										},
+										series: [
+											{
+												name: '面积占比',
+												type: 'pie',
+												radius: '50%',
+												data: [
+													{value: 71, name: '海洋'},
+													{value: 29, name: '陆地'}
+												],
+												emphasis: {
+													itemStyle: {
+														shadowBlur: 10,
+														shadowOffsetX: 0,
+														shadowColor: 'rgba(0, 0, 0, 0.5)'
+													}
+												}
+											}
+										]
+									};
+
+									if (option && typeof option === 'object') {
+										myChart.setOption(option);
+									}
+								</script>
+						</span>
+					</div>
+				</div>
+
+				<div class="right">
+					<div class="onBox">
+						<div id="onBox">
+							<div class="littleTitle">地球的年龄</div><br>
+							在19世纪末，基于热力学的研究，开尔文勋爵宣称地球的年龄应该是2400万年。<br>
+							但很快地，一群地质学家通过观察一些古老的沉积岩，算出地球的年龄至少有好几亿年。<br>
+							到了1907年，卢瑟福发现所有放射性元素的半衰期都固定不变；这个发现宣告了地质学家的胜利，同时也为地球年龄的测量指明了方向。<br>
+							20世纪20年代，霍姆斯指出铀235的半衰期可以用来测量地球的年龄。<br>
+							而到了1955年，彼得森通过测量古老陨石中铀和铅的比例，发现地球的确切年龄应该是45.5亿年。<br>
+							在经过近百年的努力之后，人类终于测出了地球的年龄。<br>
+						</div>
+					</div>
+
+					<div class="downBox">
+						<div id="downBox">
+							<div class="littleTitle">地球为何拥有生命</div><br>
+							就目前所知，地球是唯一一个拥有生命的星球。<br>由于有合适的质量、位置和内部活跃程度，地球得以长期拥有海洋、大气和磁场。海洋为生命的诞生提供了舞台，大气阻止了海洋的蒸发，而磁场保证了大气不会被太阳风剥离。<br>
+							正是由于这三大要素，地球才成为一个美丽的生命绿洲。
+						<div id="pie" style="height: 380px"></div>
+						<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+						<script type="text/javascript">
+							var dom = document.getElementById("pie");
+							var myChart = echarts.init(dom);
+							var app = {};
+							var option;
+							option = {
+								tooltip: {
+									trigger: 'item',
+									formatter: '{d}%'
+								},
+								color:[
+									'#a5e7f0','#59c4e6','#516b91'
+								],
+								legend: {
+									top: '5%',
+									left: 'center'
+								},
+								series: [
+									{
+										name: '访问来源',
+										type: 'pie',
+										radius: ['40%', '70%'],
+										avoidLabelOverlap: false,
+										itemStyle: {
+											borderRadius: 10,
+											borderColor: '#fff',
+											borderWidth: 2
+										},
+										label: {
+											show: false,
+											position: 'center'
+										},
+										emphasis: {
+											label: {
+												show: true,
+												fontSize: '20',
+												fontWeight: 'bold'
+											}
+										},
+										labelLine: {
+											show: false
+										},
+										data: [
+											{value: 78, name: '氮(N2)'},
+											{value: 21, name: '氧(O2)'},
+											{value: 1, name: '其他成分'}, 
+										]
+									}
+								]
+							};
+
+							if (option && typeof option === 'object') {
+								myChart.setOption(option);
+							}
+
+						</script>
+						大气层的成分主要有氮气，占78.1%；氧气占20.9%；氩气占0.93%；还有少量的二氧化碳、稀有气体（氦气、氖气、氩气、氪气、氙气、氡气）和水蒸气。大气层的空气密度随高度而减小，越高空气越稀薄。大气层的厚度大约在1000千米以上，但没有明显的界限。
+						</div>
+					</div>
+					<div class="from">
+						来源：《宇宙奥德赛：漫步太阳系》，王爽<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;《大气:生活·读书·新知》，加布里埃<br>尔·沃克
+					</div>
+				</div>
+			</div>
+<!-- 下盒子部分结束 -->
+		</div>
+				
+<!-- 页脚部分开始 -->
+			<div class="bottom">
+				<footer>
+					资料来源：https://solarsystem.nasa.gov/planets/earth/in-depth/｜关于我们｜联系我们 MBTYX@163.com
+				</footer>
+			</div>
+<!-- 页脚部分结束 -->
+	</div>
+</body>
+</html>

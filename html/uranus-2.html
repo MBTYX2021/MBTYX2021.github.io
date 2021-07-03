@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>uranus</title>
+<link type="text/css" rel="stylesheet" href="css/style-uranus-2.css">
+	<!--/*网页设计：201918340325-renjiaxin*/-->
+	<!--/*网页编写：201905340116-mengqingrong 201918340325-renjiaxin*/-->
+</head>
+
+<body>
+	<div class="bigBox">
+<!-- 导航部分开始 -->
+		<div class="header">
+			<nav>
+				<ul>
+					<li><a href="../index.html">首页</a></li>
+					<li class="list-inline-item menuDiv"><a href="#">太阳系</a>
+						<ul class="menuUL">
+							<li class="menuLI"><a href="earth-1.html">地球</a></li><li class="menuLI"><a href="moon-1.html">月球</a></li> 
+							<li class="menuLI"><a href="sun-1.html">太阳</a></li><li class="menuLI"><a href="venus-1.html">金星</a></li> 
+							<li class="menuLI"><a href="mercury-1.html">水星</a></li> <li class="menuLI"><a href="mars-1.html">火星</a></li> 
+							<li class="menuLI"><a href="jupiter-1.html">木星</a></li><li class="menuLI"><a href="saturn-1.html">土星</a></li> 
+							<li class="menuLI"><a href="uranus-1.html">海王星</a></li> <li class="menuLI"><a href="neptune-1.html">小行星世界</a></li>
+							<li class="menuLI"><a href="edge of the solar system-1.html">太阳系边缘</a></li> <li class="menuLI"><a href="solar system survey-1.html">太阳系纵览</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+<!-- 导航部分结束 -->	
+
+<!-- 上盒子部分开始 -->
+		<div class="on">
+			<img src="img/uranus-5.jpg" width="100%" alt="sun">
+	
+			<div id="right">
+				<div id="picture">
+					<img src="img/uranus-picture.svg" width="40px" height="40px" alt="fly">
+				</div>
+				
+				<div id="nav">
+						<ul>
+							<li><a href="neptune-1.html">下一站</a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+<!-- 上盒子部分开始 -->
+		
+<!-- 中导航部分开始 -->
+		<div id="midNav">
+			<ul>
+				<li><a href="uranus-1.html">天王星</a></li>
+				<li><a class="active" href="#">深入探索</a></li>
+			</ul>
+		</div>
+<!-- 中导航部分结束 -->
+		
+<!-- 下盒子部分开始 -->
+		<div class="down">
+			<div class="left">
+					<ul id="line">
+						<li><a href="#A">▧地形外观▧</a></li>
+						<li><a href="#B">▧表面环境▧</a></li>
+						<li><a href="#C">▧星体结构▧</a></li>
+						<li><a href="#D">▧星环▧</a></li>
+						<li><a href="#E">▧卫星▧</a></li>
+					</ul>
+			</div>
+			
+			<div class="allRight">
+				<div class="mid">
+					<div class="text">
+						<span>
+						天王星是太阳系八大行星中的第七个行星，介于土星与海王星之间，是太阳系中唯一躺着运转的行星。 天王星是在1781年由英国天文学家威廉赫歇尔所发现的。天王星与太阳的距离已经非常遥远了，太阳光从太阳发出到达天王星需要经过2.7小时之久。天王星绕行太阳则需要约84年才能绕完一圈。天王星也是类木行星之一。
+						</span>
+					</div>
+
+					<div class="title">
+						<p id="A">地形外观</p>
+					</div>
+
+					<div class="text">
+						<span>
+							蓝绿色天王星是以气体为主要成份的类木行星，因此表面没有明显的地形结构。蓝蓝的一片看起来十分完美，表面没有像木星以及土星所拥有的明显环状结构。由哈伯太空望远镜的观察显示，天王星的表面事实上也有云的结构。
+						</span>
+					</div>	
+
+					<div class="title">
+						<p id="B">表面环境</p>
+					</div>
+
+					<div class="text">
+						<span>
+							天王星的大气成份绝大部分为氢，另外还有甲烷、氦等等。表面重力达8.9m/s2，比地球的9.8m/s2略小 。由於距离太阳已经十分遥远了，天王星表面的温度约为-200度，十分寒冷。
+						</span>
+					</div>
+					<div id="chart1" style="height: 300%"></div>
+        				<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+						<script type="text/javascript">
+						var dom = document.getElementById("chart1");
+						var myChart = echarts.init(dom);
+						var app = {};
+						var option;
+						option = {
+							title: {
+									text: '天王星的大气组成比例',
+									subtext: '单位（%）'
+							},
+							color:['#3cebd2','#a5e7f0','#59c4e6'],
+							tooltip: {
+								trigger: 'item'
+							},
+							legend: {
+								top: '5%',
+								left: 'center'
+							},
+							series: [
+								{
+									name: '访问来源',
+									type: 'pie',
+									radius: ['40%', '70%'],
+									avoidLabelOverlap: false,
+									label: {
+										show: false,
+										position: 'center'
+									},
+									emphasis: {
+										label: {
+											show: true,
+											fontSize: '40',
+											fontWeight: 'bold'
+										}
+									},
+									labelLine: {
+										show: false
+									},
+									data: [
+										{value: 83, name: '氢'},
+										{value: 15, name: '氦'},
+										{value: 2, name: '甲烷'},
+									]
+								}
+							]
+						};
+
+						if (option && typeof option === 'object') {
+							myChart.setOption(option);
+						}
+						</script>
+					
+					<div class="link">
+						来源：https://baike.baidu.com/item/天王星/21805?fr=aladdin
+					</div>
+					
+					<div class="title">
+						<p id="C">星体结构</p>
+					</div>
+
+					<div class="text">
+						<span>
+							天王星中心可能有个由冰和岩石所组成的核，外层则有气体和冰混杂组成的浓密大气。天王星的自转轴倾斜了９８度，换言之，天王星是横躺着绕太阳公转。天王星的所有卫星也都因其自转轴倾斜而倾斜的赤道面上公转。天王星的磁场轴也偏离了自转轴有６０度左右。
+						</span>
+					</div>
+					<div id="chart2" style="height: 400%"></div>
+						<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+						<script type="text/javascript">
+						var dom = document.getElementById("chart2");
+						var myChart = echarts.init(dom);
+						var app = {};
+						var option;
+						option = {
+							title: {
+								text: '八大行星绕日自转一周所用时间'
+							},
+							color:['#a5e7f0','#59c4e6','#516b91','#e0ffff'],
+							tooltip: {
+								trigger: 'axis',
+								axisPointer: {
+									type: 'shadow'
+								}
+							},
+							legend: {
+								data: ['地球日']
+							},
+							grid: {
+								left: '3%',
+								right: '4%',
+								bottom: '3%',
+								containLabel: true
+							},
+							xAxis: {
+								type: 'value',
+								boundaryGap: [0, 0.01]
+							},
+							yAxis: {
+								type: 'category',
+								data: ['水星', '金星', '地球', '火星', '木星', '土星','天王星','海王星']
+							},
+							series: [
+								{
+									name: '地球日',
+									type: 'bar',
+									data: [58.65, 243, 1, 1.026, 0.414, 0.436,0.72,0.671,]
+								},
+
+							]
+						};
+
+						if (option && typeof option === 'object') {
+							myChart.setOption(option);
+						}
+						</script>
+					
+					<div class="link">
+						来源：https://zhidao.baidu.com/question/522124905421072805.html
+					</div>
+					
+					<div class="title">
+						<p id="D">星环</p>
+					</div>
+
+					<div class="text">
+						<span>
+							天王星也拥有环。天王星种共有１１个环，但每个环都细细的，只有几十公里宽，不如土星环宽厚。
+						</span>
+					</div>
+
+					<div class="title">
+						<p id="E">卫星</p>
+					</div>
+
+					<div class="text">
+						<span>
+							天王星总共有27个卫星，其中五个比较大。最靠内侧的米兰达是最引人注意的大卫星。这个卫星半径虽然只有２５０公里左右，但其表面遍布着似乎被某种东西划过的巨大地形。以及深达２０公里的沟渠。直径宽达１６１０公里的天王星最大卫星泰塔尼亚的表面很少陨石坑，科学家怀疑它比较晚近的时期曾经发生过某种地质活动，但仍未得到确切的答案。<br>
+							天王星的卫星示意图
+						</span>
+					</div>
+					<div class="uranus">
+								<img src="img/uranus-6.jpg" width="100%" height="auto" alt="weixin">
+					</div>
+					<div class="link">
+						来源：https://baike.baidu.com/item/天王星/21805?fr=aladdin
+					</div>
+				</div>
+
+				<div class="right">
+					<div class="onBox">
+						<div id="onBox">
+							<div class="littleTitle">关于天王星需要知道的事情</div><br>
+							1.天王星是气态行星，人类要是居住在天王星，可能不到1秒就会死亡。<br>
+							2.天王星是距离太阳第七远的行星，也是太阳系第三大行星，它大约是地球的四倍。不过天王星太暗了并且运行缓慢，所以在古代文明中并没有将其列入行星的行列。<br>
+							3.天王星不同于太阳系中大多数以罗马神命名的行星，天王星是以希腊神的名字命名的。天王星历来被称为“太阳系中最无聊的行星”，因为乍一看，它不像其他行星那样充满活力，然而，科学家们试图证明这种看法是错误的。<br>
+							4.天王星的季节可以持续长达20年之久，而且天王星的大气越厚，密度也就越大。天王星是太阳系第三大卫星，仅次于木星。<br>
+							5.天王星是利用望远镜发现的第一颗行星。<br>
+						</div>
+					</div>
+					<div class="from">
+						来源：https://www.tanmizhi.com/html/<br>6126.html
+					</div>
+				</div>
+			</div>
+<!-- 下盒子部分结束 -->
+		</div>
+				
+<!-- 页脚部分开始 -->
+			<div class="bottom">
+				<footer>
+					资料来源：http://web.mit.edu/yenjie/www/lm-gb/Space/uranus.htm｜关于我们｜联系我们 MBTYX@163.com
+				</footer>
+			</div>
+<!-- 页脚部分结束 -->
+	</div>
+</body>
+</html>

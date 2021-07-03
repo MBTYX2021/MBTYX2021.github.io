@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>asteroid world</title>
+<link type="text/css" rel="stylesheet" href="css/style-asteroid world-2.css">
+	<!--/*网页设计：201918340325-renjiaxin*/-->
+	<!--/*网页编写：201918340323-qiuyingyue 201918340325-renjiaxin*/-->
+</head>
+
+<body>
+	<div class="bigBox">
+<!-- 导航部分开始 -->
+		<div class="header">
+			<nav>
+				<ul>
+					<li><a href="../index.html">首页</a></li>
+					<li class="list-inline-item menuDiv"><a href="#">太阳系</a>
+						<ul class="menuUL">
+							 <li class="menuLI"><a href="earth-1.html">地球</a></li>
+							<li class="menuLI"><a href="moon-1.html">月球</a></li> <li class="menuLI"><a href="sun-1.html">太阳</a></li>
+							<li class="menuLI"><a href="venus-1.html">金星</a></li> <li class="menuLI"><a href="mercury-1.html">水星</a></li> 
+							<li class="menuLI"><a href="mars-1.html">火星</a></li> <li class="menuLI"><a href="jupiter-1.html">木星</a></li>
+							<li class="menuLI"><a href="saturn-1.html">土星</a></li> <li class="menuLI"><a href="uranus-1.html">天王星</a></li>
+							<li class="menuLI"><a href="neptune-1.html">海王星</a></li>
+							<li class="menuLI"><a href="edge of the solar system-1.html">太阳系边缘</a></li> <li class="menuLI"><a href="solar system survey-1.html">太阳系纵览</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+<!-- 导航部分结束 -->	
+
+<!-- 上盒子部分开始 -->
+		<div class="on">
+			<img src="img/asteroid world-4.jpg" width="100%" alt="asteroid world">
+	
+			<div id="right">
+				<div id="picture">
+					<img src="img/earth-picture.svg" width="40px" height="40px" alt="fly">
+				</div>
+				
+				<div id="nav">
+						<ul>
+							<li><a href="edge of the solar system-1.html">下一站</a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+<!-- 上盒子部分开始 -->
+		
+<!-- 中导航部分开始 -->
+		<div id="midNav">
+			<ul>
+				<li><a href="asteroid world-1.html">关于小行星</a></li>
+				<li><a class="active" href="#">深入探索</a></li>
+			</ul>
+		</div>
+<!-- 中导航部分结束 -->
+		
+<!-- 下盒子部分开始 -->
+		<div class="down">
+			<div class="left">
+					<ul id="line">
+						<li><a href="#A">▧小行星▧</a></li>
+						<li><a href="#B">▧彗星▧</a></li>
+						<li><a href="#C">▧流星与陨石▧</a></li>
+					</ul>
+			</div>
+			
+			<div class="allRight">
+				<div class="mid">
+					<div class="text">
+						<span>
+						不要让这个名字欺骗了你，我们太阳系的小天体——小行星、彗星和流星——充满了巨大的惊喜。<br>
+						小行星和彗星（以及有时来自它们的流星）是 46 亿年前太阳系形成的残余物。虽然行星和卫星在数千年中发生了变化，但许多小块冰、岩石和金属并没有，它们很像行星进化的化石记录。
+						</span>
+					</div>
+					
+					
+					<div class="title">
+						<p id="A">小行星</p>
+					</div>
+
+					<div class="text">
+						<span>
+							小行星是大约 46 亿年前太阳系早期形成时遗留下来的多岩石、没有空气的残余物。<br>
+							目前已知的小行星数量是： 1,097,106.<br>
+							大多数这种古老的太空瓦砾都可以在主小行星带内的火星和木星之间围绕太阳运行。小行星的大小范围从灶神星——最大的直径约 329 英里（530 公里）——到直径小于 33 英尺（10 米）的天体。
+						</span>
+					</div>	
+
+					<div class="chartTitle">小行星发现数量</div>
+					<div id="container1" style="height: 360%;margin-top: 5px"></div>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+       
+
+        <script type="text/javascript">
+var dom = document.getElementById("container1");
+var myChart = echarts.init(dom);
+var app = {};
+
+var option;
+
+
+
+var posList = [
+    'left', 'right', 'top', 'bottom',
+    'inside',
+    'insideTop', 'insideLeft', 'insideRight', 'insideBottom',
+    'insideTopLeft', 'insideTopRight', 'insideBottomLeft', 'insideBottomRight'
+];
+
+app.configParameters = {
+    rotate: {
+        min: -90,
+        max: 90
+    },
+    align: {
+        options: {
+            left: 'left',
+            center: 'center',
+            right: 'right'
+        }
+    },
+    verticalAlign: {
+        options: {
+            top: 'top',
+            middle: 'middle',
+            bottom: 'bottom'
+        }
+    },
+    position: {
+        options: posList.reduce(function (map, pos) {
+            map[pos] = pos;
+            return map;
+        }, {})
+    },
+    distance: {
+        min: 0,
+        max: 100
+    }
+};
+
+app.config = {
+    rotate: 90,
+    align: 'left',
+    verticalAlign: 'middle',
+    position: 'insideBottom',
+    distance: 15,
+    onChange: function () {
+        var labelOption = {
+            normal: {
+                rotate: app.config.rotate,
+                align: app.config.align,
+                verticalAlign: app.config.verticalAlign,
+                position: app.config.position,
+                distance: app.config.distance
+            }
+        };
+        myChart.setOption({
+            series: [{
+                label: labelOption
+            }, {
+                label: labelOption
+            }, {
+                label: labelOption
+            }, {
+                label: labelOption
+            }]
+        });
+    }
+};
+
+
+var labelOption = {
+    show: true,
+    position: app.config.position,
+    distance: app.config.distance,
+    align: app.config.align,
+    verticalAlign: app.config.verticalAlign,
+    rotate: app.config.rotate,
+    formatter: '{c}  {name|{a}}',
+    fontSize: 16,
+    rich: {
+        name: {
+        }
+    }
+};
+
+option = {
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+	color:['#893448','#d95850','#eb8146'],
+    legend: {
+        data: ['ALL', '140m+', '1km+']
+    },
+    toolbox: {
+        show: true,
+        orient: 'vertical',
+        left: 'right',
+        top: 'center',
+        feature: {
+            mark: {show: true},
+            dataView: {show: true, readOnly: false},
+            magicType: {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+            restore: {show: true},
+            saveAsImage: {show: true}
+        }
+    },
+    xAxis: [
+        {
+            type: 'category',
+            axisTick: {show: false},
+            data: ['1980', '1990', '2000', '2010', '2020']
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value'
+        }
+    ],
+    series: [
+        {
+            name: 'ALL',
+            type: 'bar',
+            barGap: 0,
+            label: labelOption,
+            emphasis: {
+                focus: 'series'
+            },
+            data: [0, 0, 899, 6656, 22098]
+        },
+        {
+            name: '140m+',
+            type: 'bar',
+            label: labelOption,
+            emphasis: {
+                focus: 'series'
+            },
+            data: [0, 137, 787, 4355, 9026]
+        },
+        {
+            name: '1km+',
+            type: 'bar',
+            label: labelOption,
+            emphasis: {
+                focus: 'series'
+            },
+            data: [44, 90, 310, 790, 885]
+        },
+        
+    ]
+};
+
+if (option && typeof option === 'object') {
+    myChart.setOption(option);
+}
+
+        </script>
+					<div class="chartSource">数据来源：https://cneos.jpl.nasa.gov/stats/totals.html</div>
+					
+					<div class="title">
+						<p id="B">彗星</p>
+					</div>
+
+					<div class="text">
+						<span>
+							彗星是围绕太阳运行的由冷冻气体、岩石和尘埃组成的宇宙雪球。当冻结时，它们有一个小镇那么大。当彗星的轨道使其靠近太阳时，它会升温并将尘埃和气体喷入一个比大多数行星都大的巨大发光头部。尘埃和气体形成一条从太阳向外延伸数百万英里的尾巴。可能有数十亿颗彗星在柯伊伯带和更远的奥尔特云中围绕我们的太阳运行。<br>
+							目前已知彗星的数量是： 3,736
+						</span>
+					</div>
+
+					<div class="title">
+						<p id="C">流星与陨石</p>
+					</div>
+
+					<div class="text">
+						<span>
+							流星体是太空中的物体，大小从尘埃颗粒到小行星不等。我们将它们视为“太空岩石”。<br>
+							当流星体高速进入地球（或其他行星，如火星）的大气层并燃烧时，火球或“流星”被称为流星。<br>
+							当流星体在穿越大气层并撞击地面时幸存下来，它被称为陨石。
+						</span>
+					</div>
+				
+				</div>
+
+				<div class="right">
+					<div class="onBox">
+						<div id="onBox">
+							<div class="littleTitle">什么是流星雨？</div><br>
+							科学家估计，每天约有 48.5 吨（44 吨或 44,000 公斤）的陨石物质落在地球上。几乎所有的物质都在地球大气层中蒸发，留下一条被亲切地称为“流星”的明亮轨迹。在任何给定的夜晚，通常每小时可以看到几颗流星。有时数量会急剧增加——这些事件被称为流星雨。<br>
+						</div>
+					</div>
+
+					<div class="downBox">
+						<div id="downBox">
+							<div class="littleTitle">你知道吗？</div><br>
+							主小行星带中所有小行星的总质量总和小于地球的月球。
+						</div>
+						<div class="pictureTitle">12颗质量最大的行星在小行星带中的质量占比</div>
+					<div class="picture1">
+						<img src="img/asteroid world-6.jpg" width="100%" height="60%" alt="Oort Cloud">
+					</div>
+					</div>
+					
+					
+					
+					<div class="from">
+						来源：NASA官网
+					</div>
+				</div>
+			</div>
+<!-- 下盒子部分结束 -->
+		</div>
+				
+<!-- 页脚部分开始 -->
+			<div class="bottom">
+				<footer>
+					资料来源：https://solarsystem.nasa.gov/asteroids-comets-and-meteors/overview/｜关于我们｜联系我们 MBTYX@163.com
+				</footer>
+			</div>
+<!-- 页脚部分结束 -->
+	</div>
+</body>
+</html>

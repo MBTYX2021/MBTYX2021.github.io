@@ -1,0 +1,383 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>solar system survey</title>
+<link type="text/css" rel="stylesheet" href="css/style-solar system survey-2.css">
+	<!--/*网页设计：201918340325-renjiaxin*/-->
+	<!--/*网页编写：201918340323-qiuyingyue 201918340325-renjiaxin*/-->
+</head>
+
+<body>
+	<div class="bigBox">
+<!-- 导航部分开始 -->
+		<div class="header">
+			<nav>
+				<ul>
+					<li><a href="../index.html">首页</a></li>
+					<li class="list-inline-item menuDiv"><a href="#">太阳系</a>
+						<ul class="menuUL">
+							<li class="menuLI"><a href="earth-1.html">地球</a></li>
+							<li class="menuLI"><a href="moon-1.html">月球</a></li> <li class="menuLI"><a href="sun-1.html">太阳</a></li>
+							<li class="menuLI"><a href="venus-1.html">金星</a></li> <li class="menuLI"><a href="mercury-1.html">水星</a></li> 
+							<li class="menuLI"><a href="mars-1.html">火星</a></li> <li class="menuLI"><a href="jupiter-1.html">木星</a></li>
+							<li class="menuLI"><a href="saturn-1.html">土星</a></li> <li class="menuLI"><a href="uranus-1.html">天王星</a></li>
+							<li class="menuLI"><a href="neptune-1.html">海王星</a></li> <li class="menuLI"><a href="asteroid world-1.html">小行星世界</a></li>
+							<li class="menuLI"><a href="edge of the solar system-1.html">太阳系边缘</a></li> 
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+<!-- 导航部分结束 -->	
+
+<!-- 上盒子部分开始 -->
+		<div class="on">
+			<img src="img/solar system survey-4.jpg" width="100%" alt="earth">
+	
+			<div id="right">
+				<div id="picture">
+					<img src="img/earth-picture.svg" width="40px" height="40px" alt="fly">
+				</div>
+				
+				<div id="nav">
+						<ul>
+							<li><a href="../index.html">漫步结束</a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+<!-- 上盒子部分开始 -->
+		
+<!-- 中导航部分开始 -->
+		<div id="midNav">
+			<ul>
+				<li><a href="solar system survey-1.html">太阳系纵览</a></li>
+				<li><a class="active" href="#">深入探索</a></li>
+			</ul>
+		</div>
+<!-- 中导航部分结束 -->
+		
+<!-- 下盒子部分开始 -->
+		<div class="down">
+			<div class="left">
+					<ul id="line">
+						<li><a href="#A">▧大小和距离▧</a></li>
+						<li><a href="#B">▧生命潜能▧</a></li>
+						<li><a href="#C">▧卫星▧</a></li>
+						<li><a href="#D">▧其他恒星系统▧</a></li>
+					</ul>
+			</div>
+			
+			<div class="allRight">
+				<div class="mid">
+					<div class="text">
+						<span>
+						我们的太阳系由我们的恒星、太阳以及所有受引力束缚的东西组成——水星、金星、地球、火星、木星、土星、天王星和海王星，矮行星如冥王星，数十颗卫星和数百万颗小行星、彗星和流星体。除了我们自己的太阳系，我们还发现了数千个围绕银河系其他恒星运行的行星系统。
+						</span>
+					</div>
+
+					<div class="picture2">
+						<img src="img/solar system survey-7.jpg" width="100%" alt="Oort Cloud">
+					</div>
+					
+					<div class="title">
+						<p id="A">大小和距离</p>
+					</div>
+
+					<div class="text">
+						<span>
+							我们的太阳系比围绕太阳运行的八颗行星延伸得更远。太阳系还包括位于海王星轨道之外的柯伊伯带。这是一个人烟稀少的冰天体环，几乎都比最受人们熟知的柯伊伯带天体——矮行星冥王星还要小。<br>
+							柯伊伯带边缘之外是奥尔特云,像个巨大的球壳环绕着我们的太阳系。它从未被直接观察到，但它的存在是根据数学模型和对可能起源于那里的彗星的观察预测的。<br>
+							奥尔特云由冰冷的太空碎片组成，围绕太阳运行，距离我们有1.6光年远。这种材料外壳很厚，从5,000个天文单位延伸到100,000个天文单位。一个天文单位（或 AU）是太阳到地球的距离，或约9300万英里（1.5亿公里）。
+						</span>
+					</div>	
+
+					<div class="picture1">
+						<img src="img/solar system survey-6.jpg" width="100%" height="60%" alt="Oort Cloud">
+					</div>
+					
+					<div class="title">
+						<p id="B">行星纵览</p>
+					</div>
+
+					<div class="text">
+						<span>
+							人类研究我们的太阳系已有数千年的历史，但直到最近几个世纪，科学家才开始真正弄清楚事物是如何运作的。太阳系中的各大行星渐渐进入人们的视野，它们越来越清晰，越来越被人们所熟知。<br>
+						</span>
+					</div>
+					
+					<div class="chartTitle1">各行星温度对比（单位℃）</div>
+					<div id="container" style="height: 350%;"></div>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+       
+        <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+
+var option;
+
+
+
+option = {
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+	color:['#93b7e3','#e69d87'],
+    legend: {
+        data: ['最低温度', '最高温度', ]
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: [
+        {
+            type: 'value'
+        }
+    ],
+    yAxis: [
+        {
+            type: 'category',
+            axisTick: {
+                show: false
+            },
+            data: ['水星', '金星', '地球', '火星', '木星', '土星', '天王星','海王星']
+        }
+    ],
+    series: [
+        {
+            name: '最低温度',
+            type: 'bar',
+            label: {
+                show: true,
+                position: 'inside'
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [-180, 465, -89, -133, -150, -180, -224,-218]
+        },
+        {
+            name: '最高温度',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                show: true
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [430, 500, 58, 27, -140, -125, -216,-190]
+        },
+       
+    ]
+};
+
+if (option && typeof option === 'object') {
+    myChart.setOption(option);
+}
+
+        </script>
+					<div class="chartSource2">数据来源：https://www.doc88.com/p-5187493479242.html?r=1</div>
+					
+					<div class="text">
+						<span>
+							与我们所熟知的地球不同，每个星球都有自己的特殊之处。地球之所以有生命，与地球适宜的环境条件密不可分。
+						</span>
+					</div>
+
+					<div class="chartTitle2">各行星对比</div>
+					<div id="container1" style="height: 300%;"></div>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+       
+
+        <script type="text/javascript">
+var dom = document.getElementById("container1");
+var myChart = echarts.init(dom);
+var app = {};
+
+var option;
+
+
+
+var colors = ['#893448', '#d95850', '#eb8146'];
+
+option = {
+    color: colors,
+
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross'
+        }
+    },
+	color:['#893448','#d95850','#eb8146'],
+    grid: {
+        right: '27%'
+    },
+    toolbox: {
+        feature: {
+            dataView: {show: true, readOnly: false},
+            restore: {show: true},
+            saveAsImage: {show: true}
+        }
+    },
+    legend: {
+        data: ['平均密度', '直径', '表面重力']
+    },
+    xAxis: [
+        {
+            type: 'category',
+            axisTick: {
+                alignWithLabel: true
+            },
+            data: ['水星', '金星', '地球', '火星', '木星', '土星', '天王星', '海王星']
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value',
+            name: '平均密度',
+            min: 0,
+            max: 6,
+            position: 'right',
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: colors[0]
+                }
+            },
+            axisLabel: {
+                formatter: '{value} g/cm³'
+            }
+        },
+        {
+            type: 'value',
+            name: '直径',
+            min: 3000,
+            max: 150000,
+            position: 'right',
+            offset: 80,
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: colors[1]
+                }
+            },
+            axisLabel: {
+                formatter: '{value} km'
+            }
+        },
+        {
+            type: 'value',
+            name: '表面重力',
+            min: 0,
+            max: 3,
+            position: 'left',
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: colors[2]
+                }
+            },
+            axisLabel: {
+                formatter: '{value} g地'
+            }
+        }
+    ],
+    series: [
+        {
+            name: '平均密度',
+            type: 'bar',
+            data: [5.43, 5.24, 5.52, 3.95, 1.33, 0.69, 1.29, 1.64]
+        },
+        {
+            name: '直径',
+            type: 'bar',
+            yAxisIndex: 1,
+            data: [4878, 12103, 12756, 6786, 142984, 120536, 51118, 49528]
+        },
+        {
+            name: '表面重力',
+            type: 'line',
+            yAxisIndex: 2,
+            data: [0.38, 0.90, 1.00, 0.38, 2.64, 0.93, 0.76, 1.12]
+        }
+    ]
+};
+
+if (option && typeof option === 'object') {
+    myChart.setOption(option);
+}
+
+        </script>
+					<div class="chartSource">数据来源：https://www.doc88.com/p-5187493479242.html?r=1</div>
+					
+					<div class="title">
+						<p id="C">卫星</p>
+					</div>
+
+					<div class="text">
+						<span>
+							在我们的太阳系中有超过 150 颗已知卫星，还有几颗等待发现的确认。在八颗行星中，只有水星和金星没有卫星。<br>
+							巨行星抓住最多的卫星。木星和土星长期以来一直领先于我们太阳系的卫星数量。在某些方面，这些行星周围的卫星群类似于我们太阳系的迷你版本。<br>
+							冥王星比月球还小，它的轨道上有五个卫星，其中包括冥卫一，这颗卫星如此之大，以至于冥王星都在摇晃。
+						</span>
+					</div>
+
+					<div class="title">
+						<p id="D">其他恒星系统</p>
+					</div>
+
+					<div class="text">
+						<span>
+							我们的银河系只是宇宙中数十亿个星系之一。其中，至少有1000亿颗恒星，平均而言，每颗恒星至少有一颗行星围绕它运行。这意味着银河系中可能有数千亿个像我们的太阳系这样的行星系统！
+						</span>
+					</div>
+					
+				</div>
+
+				<div class="right">
+					<div class="onBox">
+						<div id="onBox">
+							<div class="littleTitle">为什么叫“太阳系”？</div><br>
+							宇宙中有许多像我们这样的行星系统，行星围绕着主恒星运行。我们的行星系统被命名为“太阳系”，因为我们的太阳被命名为 Sol，以太阳的拉丁词“solis”以及任何与太阳有关的东西我们称之为“太阳系”。
+						</div>
+					</div>
+
+					<div class="downBox">
+						<div id="downBox">
+							<div class="littleTitle">哪些航天器将驶入星际空间？</div><br>
+							五艘航天器已经达到足够的速度，最终可以超越我们的太阳系边界。在太空中待了几十年后，其中两个到达了恒星之间的未探索空间。<br>
+							◆航海者1号于2012年进入星际，航海者2号于2018年加入。两艘航天器仍与地球保持联系。两艘航天器均于1977年发射升空。<br>
+							◆美国宇航局的新视野号航天器目前正在探索海王星之外一个名为柯伊伯带的冰冷区域，并最终将离开我们的太阳系。<br>
+							◆先驱者10号和先驱者11号最终也将在群星之间默默穿行。航天器在几十年前就耗尽了它们的电源。
+						</div>
+					</div>
+					<div class="from">
+						来源：NASA官网
+					</div>
+				</div>
+			</div>
+<!-- 下盒子部分结束 -->
+		</div>
+				
+<!-- 页脚部分开始 -->
+			<div class="bottom">
+				<footer>
+					资料来源：https://solarsystem.nasa.gov/planets/dwarf-planets/pluto/overview/｜关于我们｜联系我们 MBTYX@163.com
+				</footer>
+			</div>
+<!-- 页脚部分结束 -->
+	</div>
+</body>
+</html>

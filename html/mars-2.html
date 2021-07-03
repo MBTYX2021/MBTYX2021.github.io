@@ -1,0 +1,323 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mars</title>
+<link type="text/css" rel="stylesheet" href="css/style-mars-2.css">
+	<!--/*网页设计：201918340321-lvyuhuan*/-->
+	<!--/*网页编写：201918340321-lvyuhuan*/-->
+</head>
+
+<body>
+	<div class="bigBox">
+<!-- 导航部分开始 -->
+		<div class="header">
+			<nav>
+				<ul>
+					<li><a href="../index.html">首页</a></li>
+					<li class="list-inline-item menuDiv"><a href="#">太阳系</a>
+						<ul class="menuUL">
+							<li class="menuLI"><a href="moon-1.html">月球</a></li> <li class="menuLI"><a href="sun-1.html">太阳</a></li>
+							<li class="menuLI"><a href="venus-1.html">金星</a></li> <li class="menuLI"><a href="mercury-1.html">水星</a></li> 
+							<li class="menuLI"><a href="earth-1.html">地球</a></li> <li class="menuLI"><a href="jupiter-1.html">木星</a></li>
+							<li class="menuLI"><a href="saturn-1.html">土星</a></li> <li class="menuLI"><a href="uranus-1.html">天王星</a></li>
+							<li class="menuLI"><a href="neptune-1.html">海王星</a></li> <li class="menuLI"><a href="asteroid world-1.html">小行星世界</a></li>
+							<li class="menuLI"><a href="edge of the solar system-1.html">太阳系边缘</a></li> <li class="menuLI"><a href="solar system survey-1.html">太阳系纵览</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+<!-- 导航部分结束 -->	
+
+<!-- 上盒子部分开始 -->
+		<div class="on">
+			<img src="img/mars-5.jpg" width="100%" alt="earth">
+	
+			<div id="right">
+				<div id="picture">
+					<img src="img/earth-picture.svg" width="40px" height="40px" alt="fly">
+				</div>
+				
+				<div id="nav">
+						<ul>
+							<li><a href="jupiter-1.html">下一站</a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+<!-- 上盒子部分开始 -->
+		
+<!-- 中导航部分开始 -->
+		<div id="midNav">
+			<ul>
+				<li><a href="mars-1.html">火星</a></li>
+				<li><a class="active" href="#">深入探索</a></li>
+			</ul>
+		</div>
+<!-- 中导航部分结束 -->
+		
+<!-- 下盒子部分开始 -->
+		<div class="down">
+			<div class="left">
+					<ul id="line">
+						<li><a href="#A">▧大小和距离▧</a></li>
+						<li><a href="#B">▧轨道和旋转▧</a></li>
+						<li><a href="#C">▧结构与表面▧</a></li>
+						<li><a href="#D">▧大气层▧</a></li>
+						<li><a href="#E">▧磁气圈▧</a></li>
+						<li><a href="#F">▧星环▧</a></li>
+						<li><a href="#G">▧生命潜力▧</a></li>
+					</ul>
+			</div>
+			
+			<div class="allRight">
+				<div class="mid">
+					<div class="text">
+						<span>
+						火星是太阳系中第二小的行星。它的表面积约为地球表面积的28%，还不如地球的陆地面积大。此外，它的质量也不大，大概只有地球质量的10.7%。<br>火星是来自太阳的第四颗行星——一个尘土飞扬、寒冷、沙漠世界，大气层非常稀薄。火星也是一个充满活力的行星，有季节、极地冰帽、峡谷、灭绝的火山，而且有证据表明它在过去更加活跃。<br>
+						</span>
+					</div>
+					
+					<div class="title">
+						<p id="A">大小和距离</p>
+					</div>
+
+					<div class="text">
+						<span>
+							火星的半径为2，106英里（3，390公里），大约是地球的一半大小。如果地球是镍的大小，火星将和覆盆子一样大。火星比地球小1.9倍。
+							<div id="container1">
+								<img src="img/mars-6.png" alt="火星与地球的大小比较" width="60%">
+							</div>
+							
+							火星的平均距离为1.42亿英里（2.28亿公里），距离太阳有1.5个天文单位。一个天文单位（简称AU）是距离太阳到地球的距离。从这个距离，从太阳到火星需要13分钟的阳光。
+						</span>
+					</div>
+					
+					<div class="title">
+						<p id="B">轨道和旋转</p>
+					</div>
+
+					<div class="text">
+						<span>
+							当火星绕太阳运行时，它每24.6小时完成一次旋转，这与地球上的一天（23.9小时）非常相似。火星日被称为索尔斯——"太阳日"的缩日。火星上一年持续669.6个索尔，相当于687个地球日。<br>火星的自转轴在绕太阳轨道平面上倾斜25度。这是与地球的另一个相似之处，地球的轴向倾斜度为23.4度。<br>
+							<div id="container3" style="height: 340%"></div>
+
+					<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+
+					<script type="text/javascript">
+			var dom = document.getElementById("container3");
+			var myChart = echarts.init(dom);
+			var app = {};
+
+			var option;
+
+
+
+			option = {
+				title: {
+					text: '八大行星自转轴倾斜角对比',
+					subtext: '倾斜角度数（°）'
+				},
+				tooltip: {
+					trigger: 'axis'
+				},
+				color:['#d88273'],
+				toolbox: {
+					show: true,
+					feature: {
+						dataView: {show: true, readOnly: false},
+						magicType: {show: true, type: ['line', 'bar']},
+						restore: {show: true},
+						saveAsImage: {show: true}
+					}
+				},
+				calculable: true,
+				xAxis: [
+					{
+						type: 'category',
+						data: ['水星', '金星', '地球', '火星', '木星', '土星', '天王星', '海王星']
+					}
+				],
+				yAxis: [
+					{
+						type: 'value'
+					}
+				],
+				series: [
+					{
+						name: '自转轴倾斜角（度）',
+						type: 'bar',
+						data: [0, 177.33, 23.45, 25.19, 3.08, 26.73, 97.92, 28.80],
+						markPoint: {
+							data: [
+								{type: 'max', name: '最大值'},
+								{type: 'min', name: '最小值'}
+							]
+						},
+
+					},
+
+				]
+			};
+
+			if (option && typeof option === 'object') {
+				myChart.setOption(option);
+			}
+
+					</script>
+							和地球一样，火星有不同的季节，但是它们比地球上的季节更持久，因为火星绕太阳运行的时间更长（因为它离地球更远）。虽然在地球上，季节在一年中均匀分布，持续3个月（或四分之一年），但在火星上，由于火星围绕太阳的椭圆卵形轨道，季节长度不同。<br>北半球的春天（南部的秋天）是最长的季节，为194索尔。北半球的秋天（南方的春天）最短，为142天。北方冬季/南方夏季为154索尔，北部夏季/南部冬季为178索尔。<br>
+						</span>
+					</div>
+					
+					<div class="title">
+						<p id="C">结构与表面</p>
+					</div>
+
+					<div class="text">
+						<span>
+							火星的中心有一个密集的核心，半径在930到1300英里（1500到2100公里）之间。它由铁、镍和硫磺制成。核心周围是一块770至1，170英里（1，240至1，880公里）厚的岩石地衣，上面是铁、镁、铝、钙和钾制成的地壳。这个地壳在6到30英里（10到50公里）深之间。<br>
+							红色星球其实有很多颜色。在表面，我们看到颜色，如棕色，金色和褐色。火星看起来红的原因是岩石中的铁氧化（或生锈），岩石中的重晶石（火星"土壤"）和火星的尘埃。这些尘埃被踢入大气层，从远处看，这颗行星看起来大部分是红色的。
+						</span>
+					</div>	
+
+					<div class="title">
+						<p id="D">大气层</p>
+					</div>
+
+					<div class="text">
+						<span>
+							火星的大气层很薄，主要由二氧化碳、氮气和氩气组成。<br>
+							<div id="container2" style="height: 330%"></div>
+
+					<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+
+					<script type="text/javascript">
+			var dom = document.getElementById("container2");
+			var myChart = echarts.init(dom);
+			var app = {};
+
+			var option;
+
+
+
+			option = {
+				tooltip: {
+					trigger: 'item'
+				},
+				legend: {
+					top: '5%',
+					left: 'center'
+				},
+				color:['#d95850','#ffb248','#60c0dd','#e098c7'],
+				series: [
+					{
+						name: '组成成分 占比（%）',
+						type: 'pie',
+						radius: ['40%', '70%'],
+						avoidLabelOverlap: false,
+						itemStyle: {
+							borderRadius: 10,
+							borderColor: '#fff',
+							borderWidth: 2
+						},
+						label: {
+							show: false,
+							position: 'center'
+						},
+						emphasis: {
+							label: {
+								show: true,
+								fontSize: '20',
+								fontWeight: 'bold'
+							}
+						},
+						labelLine: {
+							show: false
+						},
+						data: [
+							{value: 95.3, name: '二氧化碳'},
+							{value: 2.7, name: '氮'},
+							{value: 1.6, name: '氩'},
+							{value: 0.4, name: '其它'},
+
+						]
+					}
+				]
+			};
+
+			if (option && typeof option === 'object') {
+				myChart.setOption(option);
+			}
+
+					</script>
+							在我们眼里，天空会因为悬浮的尘埃而朦胧而红，而不是我们在地球上看到的熟悉的蓝色色调。火星稀疏的大气层并不能提供多少保护，免受陨石、小行星和彗星等物体的冲击。
+						</span>
+					</div>
+
+					<div class="title">
+						<p id="E">磁气圈</p>
+					</div>
+
+					<div class="text">
+						<span>
+							火星今天没有全球磁场，但南半球火星地壳区域高度磁化，表明40亿年前有磁场的痕迹。
+						</span>
+					</div>
+
+					<div class="title">
+						<p id="F">星环</p>
+					</div>
+
+					<div class="text">
+						<span>
+							火星没有星环。然而，在5000万年后，当Phobos撞击火星或破裂时，它可能会在红色星球周围形成一个尘土飞扬的环。
+						</span>
+					</div>
+
+					<div class="title">
+						<p id="G">生命潜力</p>
+					</div>
+
+					<div class="text">
+						<span>
+							科学家们并不指望在火星上发现目前蓬勃发展的生物。相反，他们正在寻找很久以前存在的生命迹象，那时火星更温暖，被水覆盖着。
+						</span>
+					</div>
+				</div>
+
+				<div class="right">
+					<div class="onBox">
+						<div id="onBox">
+							<div class="littleTitle">火星上到底有没有水？</div><br>
+							1964年，NASA的水手4号才成功飞越了火星，并且传回了第一张火星表面的照片。因此，火星就被人们视为了一个毫无生机的不毛之地。<br>
+							但到了1971年，NASA的水手9号成功进入了环绕火星飞行的轨道，并拍了很多关于火星地表的清晰照片。其中一张照片展示了一个相当独特的地貌，看起来像一个被水冲刷而成、但现在已经干涸的河谷，这就是火星上曾经存在液态水的第一个间接证据。<br>
+							2001年，NASA发射了火星奥德赛号探测器，对火星的地表进行了地毯式的搜索。正是这次搜索，在火星的北极地区发现了大量的冰。这样一来，火星上有固态水就成了板上钉钉的事实。<br>
+							现在人们已经达成共识，火星上曾经有大量的水，甚至像地球一样拥有过海洋。图6.10就是NASA基于火星地质资料所重构的火星在40亿年前的样子。<br>
+						</div>
+					</div>
+
+					<div class="downBox">
+						<div id="downBox">
+							<div class="littleTitle">世界第二</div><br>
+							中国的"天文一号"任务于2021年2月10日抵达，包括一个轨道飞行器、一个着陆器和一个火星车。<br>2021年5月，当"朱荣"号火星车着陆时，中国成为第二个成功登陆火星的国家。<br>
+						</div>
+					</div>
+					<div class="from">
+						来源：《宇宙奥德赛：漫步太阳系》，王爽
+					</div>
+				</div>
+			</div>
+<!-- 下盒子部分结束 -->
+		</div>
+				
+<!-- 页脚部分开始 -->
+			<div class="bottom">
+				<footer>
+					资料来源：https://solarsystem.nasa.gov/planets/earth/in-depth/｜关于我们｜联系我们 MBTYX@163.com
+				</footer>
+			</div>
+<!-- 页脚部分结束 -->
+	</div>
+</body>
+</html>

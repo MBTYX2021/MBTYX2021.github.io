@@ -1,0 +1,351 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>saturn</title>
+<link type="text/css" rel="stylesheet" href="css/style-saturn-2.css">
+	<!--/*网页设计：201918340325-renjiaxin*/-->
+	<!--/*网页编写：201905340116-mengqingrong 201918340325-renjiaxin*/-->
+</head>
+
+<body>
+	<div class="bigBox">
+<!-- 导航部分开始 -->
+		<div class="header">
+			<nav>
+				<ul>
+					<li><a href="../index.html">首页</a></li>
+					<li class="list-inline-item menuDiv"><a href="#">太阳系</a>
+						<ul class="menuUL">
+							<li class="menuLI"><a href="earth-3.html">地球</a></li> <li class="menuLI"><a href="moon-3.html">月球</a></li> 
+							<li class="menuLI"><a href="sun-3.html">太阳</a></li><li class="menuLI"><a href="venus-3.html">金星</a></li> 
+							<li class="menuLI"><a href="mercury-3.html">水星</a></li> <li class="menuLI"><a href="mars-3.html">火星</a></li> 
+							<li class="menuLI"><a href="jupiter-3.html">木星</a></li><li class="menuLI"><a href="uranus-3.html">天王星</a></li>
+							<li class="menuLI"><a href="neptune-3.html">海王星</a></li> <li class="menuLI"><a href="asteroid world-3.html">小行星世界</a></li>
+							<li class="menuLI"><a href="edge of the solar system-3.html">太阳系边缘</a></li> <li class="menuLI"><a href="solar system survey-3.html">太阳系纵览</a></li>
+						</ul>
+					</li>
+					<li><a href="taiyangxiquantu.html">返回</a></li>
+				</ul>
+			</nav>
+		</div>
+<!-- 导航部分结束 -->	
+
+<!-- 上盒子部分开始 -->
+		<div class="on">
+			<img src="img/saturn-5.jpg" width="100%" alt="saturn">
+	
+			<div id="right">
+				<div id="name">
+						土星
+				</div>
+			</div>
+		</div>
+<!-- 上盒子部分开始 -->
+		
+<!-- 中导航部分开始 -->
+		<div id="midNav">
+			<ul>
+				<li><a href="saturn-3.html">土星</a></li>
+				<li><a class="active" href="#">深入探索</a></li>
+			</ul>
+		</div>
+<!-- 中导航部分结束 -->
+		
+<!-- 下盒子部分开始 -->
+		<div class="down">
+			<div class="left">
+					<ul id="line">
+						<li><a href="#A">▧地形外观▧</a></li>
+						<li><a href="#B">▧表面环境▧</a></li>
+						<li><a href="#C">▧星体结构▧</a></li>
+						<li><a href="#D">▧星环▧</a></li>
+						<li><a href="#E">▧卫星▧</a></li>
+					</ul>
+			</div>
+			
+			<div class="allRight">
+				<div class="mid">
+					<div class="text">
+						<span>
+						土星是距离太阳从近到远的第六颗行星，也是太阳系第二大行星。土星被成千上万美丽的细环点缀着，在行星中独树一帜。它并不是唯一一颗拥有行星环（由冰块和岩石组成）的行星，但没有谁的光环像土星环那么繁复而壮观。和同为气态巨行星的木星一样，土星也是一个大部分由氢和氦组成的巨大球体。<br>
+						先锋11是第一次访问土星的太空探测器。它是由美国宇航局于1973年发射的，用于研究小行星带，即木星和土星轨道之间的区域。NASA的旅行者。它于1977年发射，并于1980年开始探索土星的大气层。卡西尼号是第一个成功进入土星的轨道飞行任务。它于1997年与美国宇航局、欧洲航天局和意大利航天局共同运营的惠更斯太空探测器一起发射。
+						</span>
+					</div>
+					<div id="chart1" style="height: 300%"></div>
+							<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+							<script type="text/javascript">
+					var dom = document.getElementById("chart1");
+					var myChart = echarts.init(dom);
+					var app = {};
+					var option;
+					var pathSymbols = {
+					   rocket1:  'path://M-244.396,44.399c0,0,0.47-2.931-2.427-6.512c2.819-8.221,3.21-15.709,3.21-15.709s5.795,1.383,5.795,7.325C-237.818,39.679-244.396,44.399-244.396,44.399z M-260.371,40.827c0,0-3.881-12.946-3.881-18.319c0-2.416,0.262-4.566,0.669-6.517h17.684c0.411,1.952,0.675,4.104,0.675,6.519c0,5.291-3.87,18.317-3.87,18.317H-260.371z M-254.745,18.951c-1.99,0-3.603,1.676-3.603,3.744c0,2.068,1.612,3.744,3.603,3.744c1.988,0,3.602-1.676,3.602-3.744S-252.757,18.951-254.745,18.951z M-255.521,2.228v-5.098h1.402v4.969c1.603,1.213,5.941,5.069,7.901,12.5h-17.05C-261.373,7.373-257.245,3.558-255.521,2.228zM-265.07,44.399c0,0-6.577-4.721-6.577-14.896c0-5.942,5.794-7.325,5.794-7.325s0.393,7.488,3.211,15.708C-265.539,41.469-265.07,44.399-265.07,44.399z M-252.36,45.15l-1.176-1.22L-254.789,48l-1.487-4.069l-1.019,2.116l-1.488-3.826h8.067L-252.36,45.15z',
+						rocket2:  'path://M-244.396,44.399c0,0,0.47-2.931-2.427-6.512c2.819-8.221,3.21-15.709,3.21-15.709s5.795,1.383,5.795,7.325C-237.818,39.679-244.396,44.399-244.396,44.399z M-260.371,40.827c0,0-3.881-12.946-3.881-18.319c0-2.416,0.262-4.566,0.669-6.517h17.684c0.411,1.952,0.675,4.104,0.675,6.519c0,5.291-3.87,18.317-3.87,18.317H-260.371z M-254.745,18.951c-1.99,0-3.603,1.676-3.603,3.744c0,2.068,1.612,3.744,3.603,3.744c1.988,0,3.602-1.676,3.602-3.744S-252.757,18.951-254.745,18.951z M-255.521,2.228v-5.098h1.402v4.969c1.603,1.213,5.941,5.069,7.901,12.5h-17.05C-261.373,7.373-257.245,3.558-255.521,2.228zM-265.07,44.399c0,0-6.577-4.721-6.577-14.896c0-5.942,5.794-7.325,5.794-7.325s0.393,7.488,3.211,15.708C-265.539,41.469-265.07,44.399-265.07,44.399z M-252.36,45.15l-1.176-1.22L-254.789,48l-1.487-4.069l-1.019,2.116l-1.488-3.826h8.067L-252.36,45.15z',
+						rocket3: 'path://M-244.396,44.399c0,0,0.47-2.931-2.427-6.512c2.819-8.221,3.21-15.709,3.21-15.709s5.795,1.383,5.795,7.325C-237.818,39.679-244.396,44.399-244.396,44.399z M-260.371,40.827c0,0-3.881-12.946-3.881-18.319c0-2.416,0.262-4.566,0.669-6.517h17.684c0.411,1.952,0.675,4.104,0.675,6.519c0,5.291-3.87,18.317-3.87,18.317H-260.371z M-254.745,18.951c-1.99,0-3.603,1.676-3.603,3.744c0,2.068,1.612,3.744,3.603,3.744c1.988,0,3.602-1.676,3.602-3.744S-252.757,18.951-254.745,18.951z M-255.521,2.228v-5.098h1.402v4.969c1.603,1.213,5.941,5.069,7.901,12.5h-17.05C-261.373,7.373-257.245,3.558-255.521,2.228zM-265.07,44.399c0,0-6.577-4.721-6.577-14.896c0-5.942,5.794-7.325,5.794-7.325s0.393,7.488,3.211,15.708C-265.539,41.469-265.07,44.399-265.07,44.399z M-252.36,45.15l-1.176-1.22L-254.789,48l-1.487-4.069l-1.019,2.116l-1.488-3.826h8.067L-252.36,45.15z',
+						rocket4: 'path://M-244.396,44.399c0,0,0.47-2.931-2.427-6.512c2.819-8.221,3.21-15.709,3.21-15.709s5.795,1.383,5.795,7.325C-237.818,39.679-244.396,44.399-244.396,44.399z M-260.371,40.827c0,0-3.881-12.946-3.881-18.319c0-2.416,0.262-4.566,0.669-6.517h17.684c0.411,1.952,0.675,4.104,0.675,6.519c0,5.291-3.87,18.317-3.87,18.317H-260.371z M-254.745,18.951c-1.99,0-3.603,1.676-3.603,3.744c0,2.068,1.612,3.744,3.603,3.744c1.988,0,3.602-1.676,3.602-3.744S-252.757,18.951-254.745,18.951z M-255.521,2.228v-5.098h1.402v4.969c1.603,1.213,5.941,5.069,7.901,12.5h-17.05C-261.373,7.373-257.245,3.558-255.521,2.228zM-265.07,44.399c0,0-6.577-4.721-6.577-14.896c0-5.942,5.794-7.325,5.794-7.325s0.393,7.488,3.211,15.708C-265.539,41.469-265.07,44.399-265.07,44.399z M-252.36,45.15l-1.176-1.22L-254.789,48l-1.487-4.069l-1.019,2.116l-1.488-3.826h8.067L-252.36,45.15z'
+					};
+
+					option = {
+						tooltip: {
+							trigger: 'axis',
+							axisPointer: {
+								type: 'none'
+							},
+							formatter: function (params) {
+								return params[0].name + ': ' + params[0].value;
+							}
+						},
+						xAxis: {
+							data: [ '先锋11号','旅行者1号', '旅行者2号', '卡西尼号',   ],
+							axisTick: {show: false},
+							axisLine: {show: false},
+							axisLabel: {
+								color: '#DEAF00'
+							}
+						},
+						yAxis: {
+							splitLine: {show: false},
+							axisTick: {show: false},
+							axisLine: {show: false},
+							axisLabel: {show: false}
+						},
+						color: ['#DEAF00'],
+						series: [{
+							name: 'hill',
+							type: 'pictorialBar',
+							barCategoryGap: '-130%',
+							// symbol: 'path://M0,10 L10,10 L5,0 L0,10 z',
+							symbol: 'path://M0,10 L10,10 C5.5,10 5.5,5 5,0 C4.5,5 4.5,10 0,10 z',
+							itemStyle: {
+								opacity: 0.5
+							},
+							emphasis: {
+								itemStyle: {
+									opacity: 1
+								}
+							},
+							data: [100, 100, 100, 100,],
+							z: 10
+						}, {
+							name: 'glyph',
+							type: 'pictorialBar',
+							barGap: '-100%',
+							symbolPosition: 'end',
+							symbolSize: 50,
+							symbolOffset: [0, '-120%'],
+							data: [{
+								value: 100,
+								symbol: pathSymbols.rocket1,
+								symbolSize: [50, 50]
+							}, {
+								value: 100,
+								symbol: pathSymbols.rocket3,
+								symbolSize: [50, 50]
+							}, {
+								value: 100,
+								symbol: pathSymbols.rocket2,
+								symbolSize: [50, 50]
+							}, {
+								value: 100,
+								symbol: pathSymbols.rocket4,
+								symbolSize: [50, 50]
+							}]
+						}]
+					};
+
+					if (option && typeof option === 'object') {
+						myChart.setOption(option);
+					}
+					</script>
+					
+					<div class="link">
+						来源：https://www.sohu.com/a/277521552_747402
+					</div>
+					
+					<div class="title">
+						<p id="A">地形外观</p>
+					</div>
+
+					<div class="text">
+						<span>
+							土星是一颗十分特别的行星，拥有令人赞叹不以的土星环，而土星本体的外表，则像是一个木纹球。由於土星大部分由气体组成，加上高速的旋转，外观上是一颗扁平行星。其赤道半径以及两极之间的距离相差10%，是类木行星中最 "扁" 的一颗。<br>
+							相较于木星，土星表面的花纹就没有那么显著了，当然由于土星是由气体构成的，由卫星照片没有办法看出陆地的结构。
+						</span>
+					</div>	
+
+					<div class="title">
+						<p id="B">表面环境</p>
+					</div>
+
+					<div class="text">
+						<span>
+							土星上是不可能住人的，如果登陆土星，便会落入无穷无尽的"氢海"之中。土星的表面温度也相当的低，低于零下150度。<br>
+							土星的大气运动与木星极为相似，此外，和木星不同的是，土星的风几乎都是西风。土星大气中有一个很奇特的图案，那就是以北极为中心的巨大六角形。这个酷似海星的图案在北纬７６度附近环绕北极一圈，并伸出六条直线条纹汇集於北极。土星大气每隔一段时间就会出现漩涡状斑点图案，和木星相似，土星斑点图案是白色的所以称为大白斑。
+						</span>
+					</div>
+
+					<div class="title">
+						<p id="C">星体结构</p>
+					</div>
+
+					<div class="text">
+						<span>
+							土星内部构造十分类似木星中心有个由岩石及冰等组成的核，核外面包围着一层液态金属氢及氦，氢就占了全体的９７％。土星亦拥有强大的磁场，为地球磁场的２０倍。而在土星核的最内部，温度事实上是非常炙热的，可达一万度左右。其辐射热反而较由太阳所吸收的热量还要高。
+						</span>
+					</div>
+					<div id="chart2" style="height: 400%"></div>
+						<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+						<script type="text/javascript">
+						var dom = document.getElementById("chart2");
+						var myChart = echarts.init(dom);
+						var app = {};
+						var option;
+						option = {
+							title: {
+									text: '土星的大气组成比例',
+									subtext: '单位（%）'
+							},
+							tooltip: {
+								trigger: 'item'
+							},
+							color:['#893448','#d95850','#ffb248','#f2d643'],
+							legend: {
+								top: '5%',
+								left: 'center'
+							},
+							series: [
+								{
+									name: '气体组成',
+									type: 'pie',
+									radius: ['40%', '70%'],
+									avoidLabelOverlap: false,
+									itemStyle: {
+										borderRadius: 10,
+										borderColor: '#fff',
+										borderWidth: 2
+									},
+									label: {
+										show: false,
+										position: 'center'
+									},
+									emphasis: {
+										label: {
+											show: true,
+											fontSize: '40',
+											fontWeight: 'bold'
+										}
+									},
+									labelLine: {
+										show: false
+									},
+									data: [
+										{value: 0.45, name: '氨、乙炔、乙烷、磷化氢和甲烷'},
+										{value: 3.25, name: '氦'},
+										{value: 96.7, name: '氢'}
+									]
+								}
+							]
+						};
+
+						if (option && typeof option === 'object') {
+							myChart.setOption(option);
+						}
+						</script>
+					
+					<div class="link">
+						来源：https://baike.baidu.com/item/土星/136354?fr=aladdin
+					</div>
+
+					<div class="title">
+						<p id="D">星环</p>
+					</div>
+
+					<div class="text">
+						<span>
+							土星最大的特征是雄伟壮观的土星环 ，是太阳系九大行星中最显著的。它是由无数颗细微的粒子所汇集而成的，绝大部分是冰。环上到处都有空隙，比较大的空隙命名为“卡西尼环隙”、“恩克环隙”等等。这些间隙是土星卫星群的杰作。
+						</span>
+					</div>
+
+					<div class="title">
+						<p id="E">卫星</p>
+					</div>
+
+					<div class="text">
+						<span>
+							土星拥有超过60多个卫星，是太阳系中拥有卫星第二多的行星。除了泰坦之外，其他的和木星的卫星相比较下，冰的比例高出许多。 土星最大的行星为泰坦(半径2575公里)，泰坦的大气浓度为地球的１.５倍（１.５大气压），这在太阳系中十分罕见。一个大小不到地球二分之一的卫星能维持如此浓密的大气，最主要的原因是它的环境非常冷。（摄氏零下１8０度），其环境和原始地球相似，也许生命诞生之学说便在其中。
+						</span>
+					</div>
+					 <div id="chart3" style="height: 400%"></div>
+						<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+						<script type="text/javascript">
+						var dom = document.getElementById("chart3");
+						var myChart = echarts.init(dom);
+						var app = {};
+						var option;
+						option = {
+							title: {
+								text: '17-21世纪发现的部分土星卫星的数量',
+								subtext: '纵坐标单位（个）'
+							},
+							color:['#d95850','#ffb248','#f2d643','#893448'],
+							xAxis: {
+								type: 'category',
+								data: ['17世纪', '18世纪', '19世纪', '20世纪', '21世纪']
+							},
+							yAxis: {
+								type: 'value'
+							},
+							series: [{
+								data: [5, 2, 2, 9, 12],
+								type: 'bar'
+							}]
+						};
+
+						if (option && typeof option === 'object') {
+							myChart.setOption(option);
+						}
+						</script>
+					
+					<div class="link">
+						来源：https://baike.baidu.com/item/土星/136354?fr=aladdin
+
+					</div>
+				</div>
+
+				<div class="right">
+					<div class="onBox">
+						<div id="onBox">
+							<div class="littleTitle">关于土星需要知道的事情</div><br>
+							1.巨大的行星：土星的直径几乎横跨了9个并排的地球，这还不包括土星环。<br>
+							2.微型 “太阳系”：土星有53颗已知的卫星，另有29颗卫星等待确认——总共是82颗卫星。<br>
+							3.难得的目的地：探访土星的航天任务很少，先驱者11号、旅行者1号和2号曾飞掠土星，卡西尼号则在2004年至2017年绕土星飞行了294次。。<br>
+							4.无生命的庞然大物：正如我们所知，土星的条件无法维持生命，但土星的一些卫星有着可能维持生命的条件。<br>
+							5.加一点来自地球的碎片：土星的质量中有大约两吨来自地球——2017年，卡西尼号探测器被设计坠落并蒸发于土星大气中。<br>
+						</div>
+					</div>
+
+					<div class="downBox">
+						<div id="downBox">
+							<div class="littleTitle">流行文化中的土星</div><br>
+							土星也许是我们太阳系中最具代表性的行星了。它在流行文化中大量存在，为许多科幻故事、电影和电视剧、漫画以及视频游戏提供了背景，包括《2001：太空漫游》、《星际迷航》、《死亡空间2》等。在蒂姆·伯顿的电影《甲虫汁》中，一个尘土飞扬、虚构的土星上布满了巨大的沙虫。在2014年的电影《星际穿越》中，让宇航员能够前往另一个星系的虫洞出现在土星附近。<br>
+						</div>
+					</div>
+					<div class="from">
+						来源：https://baijiahao.baidu.com/《天文在线》
+					</div>
+				</div>
+			</div>
+<!-- 下盒子部分结束 -->
+		</div>
+				
+<!-- 页脚部分开始 -->
+			<div class="bottom">
+				<footer>
+					资料来源：http://web.mit.edu/yenjie/www/lm-gb/Space/saturn.htm｜关于我们｜联系我们 MBTYX@163.com
+				</footer>
+			</div>
+<!-- 页脚部分结束 -->
+	</div>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jupiter</title>
+<link type="text/css" rel="stylesheet" href="css/style-jupiter-2.css">
+	<!--/*网页设计：201918340325-renjiaxin*/-->
+	<!--/*网页编写：201905340116-mengqingrong 201918340325-renjiaxin*/-->
+</head>
+
+<body>
+	<div class="bigBox">
+<!-- 导航部分开始 -->
+		<div class="header">
+			<nav>
+				<ul>
+					<li><a href="../index.html">首页</a></li>
+					<li class="list-inline-item menuDiv"><a href="#">太阳系</a>
+						<ul class="menuUL">
+							<li class="menuLI"><a href="earth-1.html">地球</a></li> <li class="menuLI"><a href="moon-1.html">月球</a></li> 
+							<li class="menuLI"><a href="sun-1.html">太阳</a></li><li class="menuLI"><a href="venus-1.html">金星</a></li> 
+							<li class="menuLI"><a href="mercury-1.html">水星</a></li> <li class="menuLI"><a href="mars-1.html">火星</a></li> 
+							<li class="menuLI"><a href="saturn-1.html">土星</a></li> <li class="menuLI"><a href="uranus-1.html">天王星</a></li>
+							<li class="menuLI"><a href="neptune-1.html">海王星</a></li> <li class="menuLI"><a href="asteroid world-1.html">小行星世界</a></li>
+							<li class="menuLI"><a href="edge of the solar system-1.html">太阳系边缘</a></li> <li class="menuLI"><a href="solar system survey-1.html">太阳系纵览</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+<!-- 导航部分结束 -->	
+
+<!-- 上盒子部分开始 -->
+		<div class="on">
+			<img src="img/jupiter-5.jpg" width="100%" alt="sun">
+	
+			<div id="right">
+				<div id="picture">
+					<img src="img/jupiter-picture.svg" width="40px" height="40px" alt="fly">
+				</div>
+				
+				<div id="nav">
+						<ul>
+							<li><a href="saturn-1.html">下一站</a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+<!-- 上盒子部分开始 -->
+		
+<!-- 中导航部分开始 -->
+		<div id="midNav">
+			<ul>
+				<li><a href="jupiter-1.html">木星</a></li>
+				<li><a class="active" href="#">深入探索</a></li>
+			</ul>
+		</div>
+<!-- 中导航部分结束 -->
+		
+<!-- 下盒子部分开始 -->
+		<div class="down">
+			<div class="left">
+					<ul id="line">
+						<li><a href="#A">▧地形外观▧</a></li>
+						<li><a href="#B">▧表面环境▧</a></li>
+						<li><a href="#C">▧星体结构▧</a></li>
+						<li><a href="#D">▧星环▧</a></li>
+						<li><a href="#E">▧卫星▧</a></li>
+					</ul>
+			</div>
+			
+			<div class="allRight">
+				<div class="mid">
+					<div class="text">
+						<span>
+						木星是距离太阳第五近的行星，也是太阳系中体积最大的行星，截至2019年已知有79颗卫星。古人早已认识这颗行星 ，罗马人以主神朱庇特命名这颗行星。古代中国则称木星为岁星，取其绕行天球一周约为12年，与地支相同之故。到西汉时期，《史记‧天官书》作者司马迁从实际观测发现岁星呈青色，与“五行”学说联系在一起，正式把它命名为木星。
+						</span>
+					</div>
+				<div id="chart1" style="height: 400%"></div>
+
+					<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+					<script type="text/javascript">
+					var dom = document.getElementById("chart1");
+					var myChart = echarts.init(dom);
+					var app = {};
+					var option;
+
+					option = {
+						title: {
+							text: '行星体积大小比较',
+							subtext: '以地球体积为1，体积1.0832073×10^12km'
+						},
+						color:['#893448','#d95850','#ffb248','#f2d643'],
+						xAxis: {
+							type: 'category',
+							data: ['金星', '水星', '火星', '木星', '土星', '天王星', '海王星']
+						},
+						yAxis: {
+							type: 'value'
+						},
+						series: [{
+							data: [0.86, 0.056, 0.15, 1317, 745, 65, 57],
+							type: 'bar'
+						}]
+					};
+
+					if (option && typeof option === 'object') {
+						myChart.setOption(option);
+					}
+        			</script>
+					
+					<div class="title">
+						<p id="A">地形外观</p>
+					</div>
+
+					<div class="text">
+						<span>
+							木星表面有红、褐、白等五彩缤纷的条纹图案，可以推测木星大气中的风向是平行于赤道方向，因区域的不同而交互吹着西风及东风，是木星大气的一向明显特征。大气中含有极微的甲烷、乙烷之类的有机成份，而且有打雷现象，生成有机物的机率相当大。木星表面最大的特别，首推南半球的大红斑。这个巨大的圆形漩涡超过地球直径的３倍。大红斑的红色令人印象深刻，颜色似乎来自红磷。
+						</span>
+					</div>	
+					<div id="container" style="height: 400%"></div>
+						<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+						<script type="text/javascript">
+						var dom = document.getElementById("container");
+						var myChart = echarts.init(dom);
+						var app = {};
+						var option;
+						option = {
+							title: {
+									text: '木星大红斑逐渐变小数据图',
+									subtext: '纵坐标为长度（km）'
+							},
+							color:['#d95850','#ffb248','#f2d643'],
+							xAxis: {
+								type: 'category',
+								data: ['1979年', '1995年', '2009年', '2015年']
+							},
+							yAxis: {
+								type: 'value'
+							},
+							series: [{
+								data: [23000, 20950, 17910, 16500],
+								type: 'line'
+							}]
+						};
+
+						if (option && typeof option === 'object') {
+							myChart.setOption(option);
+						}
+					</script>
+					
+					<div class="link">
+						来源：https://www.tanmizhi.com/html/6126.html
+					</div>
+					
+					<div class="title">
+						<p id="B">表面环境</p>
+					</div>
+
+					<div class="text">
+						<span>
+							木星的成份绝大部分是氢和氦。木星离太阳比较远，表面温度低达摄氏零下１５０度，木星内部散放出来的热，是它从太阳接受的热的两倍以上，所以如果木星只靠太阳的热来加温，表面温度还会再低２０度。
+						</span>
+					</div>
+
+					<div class="title">
+						<p id="C">星体结构</p>
+					</div>
+
+					<div class="text">
+						<span>
+							木星的表面是由液态氢以及氦所组成的，在深入地心为液态的金属氢，其核心为一个岩质的核，约有地球的两倍大，十倍重。<br>
+							木星拥有非常大的磁场，表面磁场的强度超过地球的１０倍。木星的磁气圈分布比地球磁气圈的大上１００多倍，是太阳系中最大的磁气圈。由于太阳风和磁气圈的作用，木星也和地球一样在极区有极光产生。
+						</span>
+					</div>
+
+					<div class="title">
+						<p id="D">星环</p>
+					</div>
+
+					<div class="text">
+						<span>
+							木星也有环，只是远逊于土星的环，据从地面进行光谱观测的结果显示，木星薄环的成份可能是岩石（矽酸盐类），宽度超过十万公里。
+						</span>
+					</div>
+
+					<div class="title">
+						<p id="E">卫星</p>
+					</div>
+
+					<div class="text">
+						<span>
+							木卫一、木卫二、木卫三、木卫四在1610年被伽利略用望远镜发现，称为伽利略卫星。1892年巴纳德发现了木卫五，其他卫星都是1904年以后用照相方法陆续发现的。旅行者号飞船于1979年发现了木卫十四，1980年又先后发现木卫十五和木卫十六。除四个伽利略卫星外，其余的卫星半径多是几千米到20千米的大石头。木卫三半径为2631千米，是卫星中最大的一颗，直径大于水星。木卫二可能存在液态的海洋。木星的四个伽利略卫星和木卫五的轨道几乎在木星的赤道面上。木星有众多卫星，2018年已发现79颗。
+						</span>
+					</div>
+					<div id="chart2" style="height:650%;width: 100%"></div>
+ 						<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+       					<script type="text/javascript">
+						var dom = document.getElementById("chart2");
+						var myChart = echarts.init(dom);
+						var app = {};
+						var option;
+
+						option = {
+							title: {
+							text: '木星卫星按照行星群分组',
+						},
+							color:['#893448','#d95850','#ffb248','#d88273','#e7dbc3','#fcce10','#c1232b'],
+							legend: {
+								top: 'bottom'
+							},
+							toolbox: {
+								show: true,
+								feature: {
+									mark: {show: true},
+									dataView: {show: true, readOnly: false},
+									restore: {show: true},
+									saveAsImage: {show: true}
+								}
+							},
+							series: [
+								{
+									name: '面积模式',
+									type: 'pie',
+									radius: [50, 250],
+									center: ['50%', '50%'],
+									roseType: 'area',
+									itemStyle: {
+										borderRadius: 7
+									},
+									data: [
+										{value: 4, name: '木星内部卫星群4个'},
+										{value: 4, name: '伽利略卫星4个'},
+										{value: 4, name: '希玛莉亚卫星群4个'},
+										{value: 12, name: '亚克南卫星群12个'},
+										{value: 12, name: '加尓尼卫星群12个'},
+										{value: 11, name: '帕西法尔卫星群11个'},
+										{value: 2, name: '不属于其他群2个'}
+									]
+								}
+							]
+						};
+
+						if (option && typeof option === 'object') {
+							myChart.setOption(option);
+						}
+						</script>
+					
+					<div class="link">
+						来源：https://baike.baidu.com/item/木星/222105
+					</div>
+					
+				</div>
+
+				<div class="right">
+					<div class="onBox">
+						<div id="onBox">
+							<div class="littleTitle">人类对木星的探测</div><br>
+							最初，天文学家们使用地球上的望远镜来研究木星。伽利略是第一个用望远镜观测木星的天文学家，正是他最先使用望远镜发现了木星的4颗卫星。此外，天文学家也使用围绕地球旋转的类似哈勃太空望远镜的望远镜来研究木星。<br>
+							为了一睹木星的“真容”，揭示其“内心”，NASA已先后向木星派出了8个探测器：“先驱者10”号、“先驱者11”号、“旅行者1”号、“旅行者2”号、“尤利西斯”号、“伽利略”号、“卡西尼”号土星探测器、“新地平线”号冥王星探测器。
+						</div>
+					</div>
+					
+					<div class="downBox">
+						<div id="downBox">
+							<div class="littleTitle">正在消失的木星大红斑</div><br>
+							木星的红斑是太阳系最突出的特征之一。这是一个和地球三倍一样大小的巨大风暴。自从宇航员第一次用望远镜看见它开始，它一直围绕着木星云层顶端肆虐。被称为巨大红斑的物质其实是由高压反气旋形成的风暴。宇航员注意到它在过去十年或者更久是缓慢收缩的过程，比它原来的大小已经减少了15%。<br>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+<!-- 下盒子部分结束 -->
+		</div>
+				
+<!-- 页脚部分开始 -->
+			<div class="bottom">
+				<footer>
+					资料来源：http://web.mit.edu/yenjie/www/lm-gb/Space/jupiter.htm｜关于我们｜联系我们 MBTYX@163.com
+				</footer>
+			</div>
+<!-- 页脚部分结束 -->
+	</div>
+</body>
+</html>
